@@ -18,12 +18,12 @@ let pokemonList = [
 
 for (let i= 0; i<pokemonList.length; i++){
       if (pokemonList[i].height<3){
-      document.write("<p>" + pokemonList[i].name+" - " + "Height:" + pokemonList[i].height + " - This is a tiny pokemon!")
+      document.write("<p>" + pokemonList[i].name+" - " + "Height: " + pokemonList[i].height + " - This is a tiny pokemon!")
     }	else if(pokemonList[i].height>=3 && pokemonList[i].height <5){
-      document.write("<p>" + pokemonList[i].name+" - " + "Height:" + pokemonList[i].height + " - This is an average pokemon!")
+      document.write("<p>" + pokemonList[i].name+" - " + "Height: " + pokemonList[i].height + " - This is an average pokemon!")
     } else if(pokemonList[i].height <= 6){
-      document.write("<p>" + pokemonList[i].name+" - " + "Height:" + pokemonList[i].height + " - Wow! This is a big pokemon!")
-    } else {document.write("<p>" + pokemonList[i].name+" - " + "Height:" + pokemonList[i].height + " - This is a Giant pokemon!")}
+      document.write("<p>" + pokemonList[i].name+" - " + "Height: " + pokemonList[i].height + " - Wow! This is a big pokemon!")
+    } else {document.write("<p>" + pokemonList[i].name+" - " + "Height: " + pokemonList[i].height + " - This is a Giant pokemon!")}
 }
      
     
