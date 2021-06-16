@@ -6,7 +6,7 @@ let pokemonRepository = (function (){
        height:2.4, 
        type: ['grass','Poison']},
       
-      {numer: 2, 
+      {number: 2, 
        name: 'Ivysaur', 
        height:3.3, 
        type: ['grass','Poison']},
@@ -34,8 +34,11 @@ let pokemonRepository = (function (){
   pokemonRepository.add({number:'4', name:'Charmander', height:'2', type:'lizard'});
   console.log(pokemonRepository.getAll());
   pokemonRepository.getAll().forEach(function(pokemon){
-    document.write(pokemon.name + ' - ' + pokemon.height + ', ')
+  document.write('<p>' + pokemon.number + ', ' + pokemon.name + ', ' + pokemon.height + ', ' +  pokemon.type + ', ' + '</p>')
   })
+  
+  
+  
 
 /* for (let i= 0; i<pokemonList.length; i++){
       if (pokemonList[i].height<3){
