@@ -33,6 +33,9 @@ let pokemonRepository = (function (){
   console.log(pokemonRepository.getAll());
   pokemonRepository.add({number:'4', name:'Charmander', height:'2', type:'lizard'});
   console.log(pokemonRepository.getAll());
+  pokemonRepository.getAll().forEach(function(pokemon){
+    document.write(pokemon.name + ' - ' + pokemon.height + ', ')
+  })
 
 /* for (let i= 0; i<pokemonList.length; i++){
       if (pokemonList[i].height<3){
