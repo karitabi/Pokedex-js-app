@@ -4,17 +4,17 @@ let pokemonRepository = (function (){
       {number: 1, 
        name: 'Bulbasaur', 
        height:2.4, 
-       type: ['grass','Poison']},
+       type: ['grass',' Poison']},
       
       {number: 2, 
        name: 'Ivysaur', 
        height:3.3, 
-       type: ['grass','Poison']},
+       type: ['grass',' Poison']},
 
       {number: 3, 
       name: 'Venusaur', 
       height:6.7, 
-      type: ['grass','Poison']}
+      type: ['grass',' Poison']}
 ];
 
   function add(pokemon){
@@ -34,7 +34,7 @@ let pokemonRepository = (function (){
   pokemonRepository.add({number:'4', name:'Charmander', height:'2', type:'lizard'});
   console.log(pokemonRepository.getAll());
   pokemonRepository.getAll().forEach(function(pokemon){
-  document.write('<p>' + pokemon.number + ', ' + pokemon.name + ', ' + pokemon.height + ', ' +  pokemon.type + ', ' + '</p>')
+  document.write('<p>' + pokemon.number + ', ' + pokemon.name + ', ' + pokemon.height + ', ' +  pokemon.type + '</p>')
   })
   
   
