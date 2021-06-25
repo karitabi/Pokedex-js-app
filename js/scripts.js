@@ -1,4 +1,4 @@
-let pokemonRepository = (function(){
+let pokemonRepository = (function () {
 
   let pokemonList = [ 
       {number: 1, 
@@ -17,34 +17,52 @@ let pokemonRepository = (function(){
       type: ['grass',' Poison']}
 ];
 
-  function add(pokemon){
-      pokemonList.push(pokemon);
-       }
+    function add(pokemon) {
+     if (
+      typeof pokemon === "object" &&
+      "name" in pokemon &&
+      "height" in pokemon &&
+      "types" in pokemon
+    ) {
+      repository.push(pokemon);
+    } else {
+      console.log("pokemon is not correct");
+    }
+  }
+ 			
+   function add(pokemon){
+     	pokemonList.push(pokemon);
+   }
 	
-      function getAll(){
+   function getAll(){
       return pokemonList;
-	    }
+	 }
+      
+   function addListItem(pokemon){
+         let pokemonList= document.querySelector(".pokemon-list");
+         let listItem = document.createElement("li");
+         let button= document.createElement("button");
+         button.innerText=pokemon.name;
+         button.classList.add("button-class");
+         listItem.appendChild(button);
+         pokemonList.appendChild(listItem);
+       };
 
-      return{
-      getAll: getAll,
-      add: add
-      }
-  })();
+    return{
+         add: add,
+         getAll: getAll,
+         addListItem: addListItem
+      };
+})();
 
-      console.log(pokemonRepository.getAll());
+  console.log(pokemonRepository.getAll());
   
-/*   pokemonRepository.add({number:'4', name:'Charmander', height:'2', type:'lizard'});
-  console.log(pokemonRepository.getAll()); */
+  pokemonRepository.add({number:'4', name:'Charmander', height:'2', type:'lizard'});
+  console.log(pokemonRepository.getAll()); 
   
-      pokemonRepository.getAll().forEach(function(pokemon) {
-        let pokemonList= document.querySelector(".pokemon-list");
-        let listItem = document.createElement("li");
-        let button= document.createElement("button");
-        button.innerText=pokemon.name;
-        button.classList.add("button-class");
-        listItem.appendChild(button);
-        pokemonList.appendChild(listItem);
-    }); 
+  pokemonRepository.getAll().forEach(function (pokemon) {
+      	pokemonRepository.addListItem(pokemon);
+  }); 
  
   
 
@@ -62,4 +80,3 @@ console.log (pokemonRepository.getAll))
 pokemonList.forEach(function(userList){
 	console.log(userList)
 }); */ 
-    
