@@ -37,6 +37,12 @@ let pokemonRepository = (function () {
    function getAll(){
       return pokemonList;
 	 }
+   
+   function showDetails(pokemon){
+   		console.log (pokemon);
+   }
+   
+   
       
    function addListItem(pokemon){
          let pokemonList= document.querySelector(".pokemon-list");
@@ -46,6 +52,9 @@ let pokemonRepository = (function () {
          button.classList.add("button-class");
          listItem.appendChild(button);
          pokemonList.appendChild(listItem);
+         button.addEventListener("click", function() {
+   			 		showDetails(pokemon);
+  			 })
        };
 
     return{
@@ -55,6 +64,7 @@ let pokemonRepository = (function () {
       };
 })();
 
+      
   console.log(pokemonRepository.getAll());
   
   pokemonRepository.add({number:'4', name:'Charmander', height:'2', type:'lizard'});
@@ -64,7 +74,7 @@ let pokemonRepository = (function () {
       	pokemonRepository.addListItem(pokemon);
   }); 
  
-  
+ 
 
 /* for (let i= 0; i<pokemonList.length; i++){
       if (pokemonList[i].height<3){
