@@ -1,3 +1,25 @@
+
+/*
+colors used 
+Primary Color (baby blue): #e4f3f5;
+link color (light green): #5D958C;
+visited color (dark green):#05676e;
+active color (forest):#489c79;
+Primary button text color:white;
+Primary button background color: #357b70;
+Secondary button text color (Dark Gray): #2b2b2b;
+Secondary button background color(orange): #357b70;
+*/
+
+
+body {
+  background-color: var(--primary-background-color);
+  font-family: "Cabin", lato;
+  font-size: 16px;
+  line-height: 19px;
+  line-height: 1.9;
+}
+
 .button-class {
   background-color: #4caf50; /* Green */
   border: none;

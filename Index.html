@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
-        <title>Simple JS App</title>
-    </head>
-    <body>
-        <header>
-            <img src="img/pokemonlogo.gif" alt="logo">
-            <h1>Pokemon List</h1>
-            <ul class="pokemon-list"></ul>
-        </header>
-        <main>
-        </main>
-        <footer>
-        </footer>
-        <script src="js/scripts.js"></script> 
-    </body>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Simple JS App</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="img/pokemonlogo.gif" alt="logo">
+      <h1>Pokemon List</h1>
+      <ul class="pokemon-list"></ul>
+      <div class="pokemon-list">
+        <ul class="pokemon-list"></ul>
+      </div>
+      <div id="modal-container"></div>
+    </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+
 </html>
