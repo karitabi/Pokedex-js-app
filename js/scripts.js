@@ -71,7 +71,7 @@ let pokemonRepository = (function () {
   function showModal(pokemon) {
     modalContainer.innerHTML= " ";
 
-    let modal = document.creatElement ("div");
+    let modal = document.createElement ("div");
     modal.classList.add("modal");
   
     let closeButtonElement = document.createElement("button");
