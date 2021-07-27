@@ -6,6 +6,7 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -21,6 +22,7 @@ let pokemonRepository = (function () {
       console.error(e);
     })
   };
+  
   function add(pokemon) {
     if (typeof pokemon === 'object' && 'name' in pokemon) {
       pokemonList.push(pokemon)
