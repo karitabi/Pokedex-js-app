@@ -22,7 +22,7 @@ let pokemonRepository = (function () {
       console.error(e);
     })
   };
-  
+
   function add(pokemon) {
     if (typeof pokemon === 'object' && 'name' in pokemon) {
       pokemonList.push(pokemon)
@@ -56,7 +56,7 @@ let pokemonRepository = (function () {
     modal.classList.add("modal");
 
     let closeButtonElement = document.createElement("button");
-    closeButtonElement.classList.classList.add("modal-close");
+    closeButtonElement.classList.add("modal-close");
     closeButtonElement.innerText="Close";
     closeButtonElement.addEventListener("click",hideModal);
 
