@@ -1,7 +1,7 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
-  let modalContainer = document.getElementById('modal-container');
+  let modalContainer = document.getElementById("modal-container");
 
   function getAll() {
     return pokemonList;
@@ -52,6 +52,7 @@ let pokemonRepository = (function () {
 
   function showModal(pokemon) {
     modalContainer.innerHTML =" ";
+
     let modal= document.createElement ("div"); 
     modal.classList.add("modal");
 
