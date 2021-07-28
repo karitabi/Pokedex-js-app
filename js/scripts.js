@@ -1,10 +1,25 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
   let modalContainer = document.getElementById("modal-container");
 
   function getAll() {
     return pokemonList;
+  }
+
+  function addListItem(pokemon) {
+    let pokemonList = document.querySelector('.list-group');
+    let listPokemon = document.createElement('li');
+    listPokemon.classList.add('list-group-item', 'list-group-item-action');
+    let button = document.createElement('button');
+    button.innerText = pokemon.name;
+    button.classList.add('btn', 'btn-block');
+    button.setAttribute('data-target', '#pokemonModal', 'data-toggle', 'modal');
+    pokemonList.appendChild(listPokemon);
+    listPokemon.appendChild(button);
+    button.addEventListener('click', function() {
+      showDetails(pokemon);
+    });
   }
 
   function loadList() {
@@ -59,13 +74,13 @@ let pokemonRepository = (function () {
     let closeButtonElement = document.createElement("button");
     closeButtonElement.classList.add("modal-close");
     closeButtonElement.innerText="Close";
-    closeButtonElement.addEventListener("click",hideModal);
+    closeButtonElement.addEventListener("click", hideModal);
 
     let titleElement= document.createElement ("h1");
     titleElement.innerText = pokemon.name;
 
     let contentElement= document.createElement ("p");
-    contentElement.innerText = "Height:" pokemon.height + "meters";
+    contentElement.innerText = "Height:" + pokemon.height + "meters";
 
     let imageElement = document.createElement ("img");
     imageElement.setAttribute("src", pokemon.imageUrl);
@@ -79,9 +94,9 @@ let pokemonRepository = (function () {
     modalContainer.classList.add("is-visible"); 
   }
 
-  function hideModal(
+  function hideModal(){
     modalContainer.classList.remove("is-visible");
-  )
+  } 
 
   window.addEventListener("keydown",(e)=>{
     if (e.key==="Escape" && modalContainer.classList.contains ("is-visible")){
