@@ -10,10 +10,10 @@ let pokemonRepository = (function () {
   function addListItem(pokemon){
     let pokemonList= document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
-    listpokemon.classList.add(".list-group-item", "list-group-item-action");
+        listpokemon.classList.add(".list-group-item", "list-group-item-action");
     let button= document.createElement("button");
-    button.innerText=pokemon.name;
-    button.classList.add("button-class");
+        button.innerText=pokemon.name;
+        button.classList.add("button-class");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.setAttribute('data-target','#pokemonModal');
