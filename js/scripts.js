@@ -115,16 +115,16 @@ let pokemonRepository = (function () {
   });
   }
 
-  /*function search (){
-    let searchInput= document.querySelector('#search-bar');
+  function search() {
+    let searchInput= document.querySelector('#searchBar');
 
-    searchInput.addEventListener('input', function(){
-      let pokemonList = document.querySelectorAll('li');
-      let searchText = searchInput.value.name();
+    searchInput.addEventListener('input', function() {
+      let listOfPokemon = document.querySelectorAll('li');
+      let searchText = searchInput.value.toLowerCase();
 
-      pokemonList.forEach(function (pokemon){
-        if (pokemon.innerText.name().indexOf(searchText)>-1{
-          pokemon.style.display = '';
+      listOfPokemon.forEach(function (pokemon) {
+        if (pokemon.innerText.toLowerCase().indexOf(searchText) > -1) {
+          pokemon.style.display = ' ';
         } else {
           pokemon.style.display = 'none'; 
         }
@@ -132,7 +132,6 @@ let pokemonRepository = (function () {
     });
   }
 
-*/
     return{
       add:add,
       getAll:getAll,
@@ -140,7 +139,7 @@ let pokemonRepository = (function () {
       loadList:loadList,
       loadDetails:loadDetails,
       showDetails:showDetails,
-      /*search: search*/
+      search:search,
     };
 })();
 
