@@ -115,23 +115,22 @@ let pokemonRepository = (function () {
   });
   }
 
-  function search() {
     let searchInput= document.querySelector('#searchBar');
 
     searchInput.addEventListener('input', function() {
-      let listOfPokemon = document.querySelectorAll('li');
-      let searchText = searchInput.value.toLowerCase();
+      let listPokemon = document.querySelectorAll('li');
+      let value = searchInput.value.toUpperCase();
+      /*let searchText = searchInput.value.toLowerCase();*/
 
-      listOfPokemon.forEach(function (pokemon) {
-        if (pokemon.innerText.toLowerCase().indexOf(searchText) > -1) {
+      listPokemon.forEach(function (pokemon) {
+        if (pokemon.innerText.toUpperCase().indexOf(value) > -1) {
           pokemon.style.display = ' ';
         } else {
           pokemon.style.display = 'none'; 
         }
       });
     });
-  }
-
+  
     return{
       add:add,
       getAll:getAll,
@@ -139,7 +138,6 @@ let pokemonRepository = (function () {
       loadList:loadList,
       loadDetails:loadDetails,
       showDetails:showDetails,
-      search:search,
     };
 })();
 
